@@ -1,0 +1,66 @@
+body,html{
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  color: #525252;
+
+}
+
+
+.form-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .form-bg{
+    width: 40%;
+    margin: 0 auto;
+    button{
+      width: 150px;
+    margin: 0 auto;
+    display: block;
+    }
+  }
+}
+
+
+//categories page
+//
+
+.welcome{
+  font-size: 1.6em;
+  padding: 20px  10px 0 30px;
+}
+
+ .create-button{
+   width: 400px;
+   height: 200px;
+   margin: 0 auto;
+   background-color: #fff;
+   border-radius: 5px;
+   display: flex;
+   justify-content: center;align-items: center;
+ }
+
+ .accordion{
+
+   width: 70%;
+   margin: 60px auto;
+   border-radius: 5px;
+
+   h2{
+     text-align: center;
+     font-size: 1.2em;
+   }
+
+   .accordion-footer{
+     width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      button{
+        margin: 20px;
+      }
+   }
+ }
