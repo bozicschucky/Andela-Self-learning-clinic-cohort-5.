@@ -4,6 +4,11 @@ python:
 # command to install dependencies
 install:
   - pip install -r requirements.txt
+  - pip install coveralls
+  #- pip install pytest
 # command to run tests
 script:
-  - pytest test.py # or py.test for Python versions 3.5 and below
+  - coverage run test.py --doctest-modules --pep8 coveralls -v --cov coveralls --cov-report term-missing # or py.test for Python versions 3.5 and below
+
+after_success:
+  - coveralls
