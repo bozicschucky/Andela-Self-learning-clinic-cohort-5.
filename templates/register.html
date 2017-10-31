@@ -1,70 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Register</title>
+{% extends 'layout.html' %}
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-
-
-  </head>
-  <body>
-
-        <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="recipes.html">Yummy Recipes</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="login.html">Log in</a></li>
-            <li><a href=""></a></li>
-
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-
-   <section class="form-container">
+{% block content%}
+      <section class="form-container">
         <div class="form-bg">
           <h2>Register</h2>
-          <form>
+          <form method="POST" action="">
             <div class="form-group">
-              <label for="exampleInputEmail1">Names </label>
-              <input type="text" class="form-control" id="name" placeholder="Firstname lastname">
+              <label for="exampleInputEmail1">User Name </label>
+              <input type="text" class="form-control" id="name" placeholder="user name" name="user_name" value="{{ request.form.user_name }}">
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email" value="{{ request.form.email }}">
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password" value="{{ request.form.password }}">
             </div>
             <button type="submit" class="btn btn-default">Register</button>
           </form>
         </div>
    </section>
 
+{% endblock %}
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
