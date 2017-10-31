@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Recipes</title>
-
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+{% extends 'layout.html' %}
 
 
-  </head>
-  <body>
 
-    <nav class="navbar navbar-default">
+
+{% block content%}
+
+<nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -24,7 +15,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="recipes.html">Yummy Recipes</a>
+          <a class="navbar-brand" href="#">Your recipe</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -32,12 +23,21 @@
 
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="login.html">Log in</a></li>
+            <li><a href="{{url_for('login')}}">Log in</a></li>
+     
 
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+
+    <div class="container">
+        {% for message in get_flashed_messages() %}
+        {{message }}
+
+    {% endfor %}
+
+    </div>
 
     <div class="container">
        <div class="accordion">
@@ -77,47 +77,5 @@
                  <div class="accordion-footer">
                    <button type="button" class="btn btn-danger" name="button"> Delete</button>
                    <button type="button" class="btn btn-info" name="button"> Update </button>
-
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-    </div>
-
-
-
-<!--categories modal  -->
-
-<div class="modal fade" tabindex="-1" role="dialog" id="categories">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Create a reciepe</h4>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Recipe title</label>
-            <input type="text" class="form-control" id="title">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Recipe Details</label>
-            <textarea  class="form-control" name="details" rows="8" cols="80"></textarea>
-          </div>
-          <button type="submit"  data-dismiss="modal" class="btn btn-default">Create Recipe</button>
-        </form>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
+                   
+{% endblock %}
