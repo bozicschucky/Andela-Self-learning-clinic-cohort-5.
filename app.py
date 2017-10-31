@@ -40,7 +40,7 @@ def dashboard():
     return render_template('index.html')
 
 
-@app.route('/recipes')
+@app.route('/')
 def recipes():
     """Routes to the recipes page
     """
