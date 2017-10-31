@@ -1,6 +1,8 @@
 
 # Yummy Recipes frontend app.
 
+[![Build Status](https://travis-ci.org/bozicschucky/Andela-Self-learning-clinic-cohort-5..svg?branch=master)](https://travis-ci.org/bozicschucky/Andela-Self-learning-clinic-cohort-5.)
+
 ### How it works (Description)
 This is a simple flask app that is supposed to enable talented cooks and individuals write awesome recipes.
 
