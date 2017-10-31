@@ -1,4 +1,4 @@
-##Yummy Recipes frontend app.
+## Yummy Recipes frontend app.
 
 ### How it works (Description)
 This is a simple flask app that is supposed to enable talented cooks and individuals write awesome recipes.
